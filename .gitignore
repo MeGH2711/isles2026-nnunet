@@ -1,0 +1,59 @@
+# Python cache & build
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# Environment variables & local secrets
+.env
+.env.local
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Sync temporary working directories
+sync_temp/
+
+# Exclude raw medical scans and preprocessed cached dataset (~47 GB)
+data/nnunet_raw/
+data/nnunet_preprocessed/
+
+# Exclude large validation arrays and predicted masks (softmax probability maps)
+data/nnunet_results/**/validation/*.npz
+data/nnunet_results/**/validation/*.nii.gz
+data/nnunet_results/**/validation/*.pkl
+!data/nnunet_results/**/validation/summary.json
+
